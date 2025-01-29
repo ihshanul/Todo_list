@@ -6,7 +6,8 @@ import AddItem from "./AddItem";
 import React, { useState } from "react";
 
 function App() {
-  const [items, setItems] = useState(JSON.parse (localStorage.getItem('Todo_List')));
+  const [items, setItems] = useState(JSON.parse(localStorage.getItem('Todo_List')) || []);
+
 
   const [newItem, setNewItem] = useState("");
 
